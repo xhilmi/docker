@@ -1,5 +1,5 @@
 # base image
-FROM alpine:3.14
+FROM alpine:latest
 
 # argument
 ARG DEBIAN_FRONTEND=noninteractive
@@ -20,6 +20,7 @@ COPY ./nginx/default ${nginx_vhost}
 COPY ./nginx/nginx.conf ${nginx_conf}
 COPY ./app /opt/app
 COPY ./start.sh /start.sh
+COPY . /home
 
 # install required python module
 RUN pip install -r /opt/app/requirements.txt
