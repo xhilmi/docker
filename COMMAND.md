@@ -1,5 +1,5 @@
 # command docker
-
+```
 docker container create mongo:latest
 docker container create --name mongoku mongo:latest
 docker container create --name mongoku -p 2727:27017 mongo:latest
@@ -21,3 +21,4 @@ docker-compose start
 docker-compose stop
 
 docker system df
+```
